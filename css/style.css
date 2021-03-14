@@ -45,7 +45,7 @@ button{
 button:hover{
     background:#CD6326;
     border: 2px solid #CD6326;
-    border: none;
+    /* border: none; */
     color: #F7F7F7;
 }
 a{
@@ -111,6 +111,7 @@ p{
 /*Header styles start*/
 .header{
     position: fixed;
+    z-index: 1;
     width: 100%;
     /* background-color: #02160b; */
 }
@@ -126,7 +127,18 @@ p{
     flex-wrap: wrap;
     list-style:none;
 }
-.header_logo a{
+.header_logo_link{
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+}
+.logo_text{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #F7F7F7;
     margin-left: 15px;
 }
 .header_list_item{
@@ -137,8 +149,7 @@ p{
 }
 .header_list{
     font-size:23px;
-    line-height: 60px;
-    /* text-decoration: none; an dcolor didn't work here */
+    align-items:center;
 }
 .header_item{
     text-decoration: none;
@@ -150,13 +161,13 @@ p{
 .header_list_item:hover:last-child, .header_list_item:focus:last-child, .header_list_item:active:last-child{
     opacity: 100;
 }
-
 /*Header styles end*/
+
 /*Survival styles start*/
 .survival{
     height: 100vh;
     background-color: #02160b;
-    background: url(../assets/img/bg_survival_hero.jpg) no-repeat center;
+    background: url(../assets/img/bg_survival_hero.jpg) no-repeat top;
     background-size: cover;
     padding: 200px 0px;
 }
@@ -178,6 +189,9 @@ p{
 /*Survival styles end*/
 
 /*Latest_Articles styles start*/
+.wrapper_latest_articles{
+    padding: 120px 0px;
+}
 .latest_articles{
     background: #CCCCCC;
     margin: 0;
@@ -193,7 +207,6 @@ p{
     line-height: 36px;
     text-align: center;
     color: #666666;
-    margin-bottom: 120px;
 }
 .carousel_wrapper{
     display: flex;
@@ -204,22 +217,52 @@ p{
     flex-wrap: wrap;
     list-style: none;
     align-items: center;
+    margin:0px;
 }
 .carousel_list_item{
     margin-left: 60px;
 
 }
-.latest_articles_articles{
-
-    margin-bottom: 239px;
+figure{
+    margin: 0;
+}
+.carousel_list_item figure{
+    position: relative;
+}
+.carousel_list_item figcaption{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    width: 90%;
+    color: #F7F7F7;
+}
+.carousel_article_title{
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0px 0px 26px 0px;
+}
+.carousel_article_subtitle{
+    font-size: 17px;
+    font-weight: 400;
+    display: block;
 }
 /*Latest_Articles styles end*/
 /*Get_Notified styles start*/
 .get_notified{
-    background: #CCCCCC;
+    background: #CCCCCC; 
+    padding-top: 240px;
+}
+.get_notified_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .get_notified_title{
     margin-bottom: 60px;
+    margin: 0;
+    padding-bottom: 60px;
 }
 .email{
     height: 60px;
@@ -227,14 +270,14 @@ p{
 .form_newsletter{
     display: flex;
     flex-wrap: wrap;
-    
+    align-items: center;   
+    padding-bottom: 240px;  
 }
 .form_newsletter_field{
     background-color: transparent;
     border: 1px solid #666666;
     height: 60px;
     width: 540px;
-
 }
 /*Get_Notified styles end*/
 /*FOOTER styles start*/
@@ -242,5 +285,31 @@ footer{
     height: 360px;
     background-color: #181617;
     background: url(../assets/img/bg_Footer.jpg) no-repeat center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+footer .wrapper{
+    max-width: auto;
+}
+.footer_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.footer_nav_list{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-between;
+}
+.footer_list_item{
+    font-size: 23px;
+}
+.social_list{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
 }
 /*FOOTER styles end*/
