@@ -45,7 +45,6 @@ button{
 button:hover{
     background:#CD6326;
     border: 2px solid #CD6326;
-    /* border: none; */
     color: #F7F7F7;
 }
 a{
@@ -106,6 +105,12 @@ p{
     font-size: 18px;
     line-height: 27px;
 }
+a figure{
+    transition: transform .2s; /* Animation */
+}
+a figure:hover{
+    transform: scale(0.9);
+}
 /*General styles end*/
 
 /*Header styles start*/
@@ -113,7 +118,10 @@ p{
     position: fixed;
     z-index: 1;
     width: 100%;
-    /* background-color: #02160b; */
+    transition: .2s linear;
+}
+.header_active{
+    background-color: #02160b;
 }
 .header_wrapper{
     display: flex;
@@ -279,23 +287,35 @@ figure{
     height: 60px;
     width: 540px;
 }
+.form_newsletter_field:hover{
+    border: 1px solid #E39128;
+    
+}
+input:focus{
+    outline-offset: 0px;
+    outline: none;
+    color: #E39128;;
+}
+.form_newsletter_btn{
+    border-radius: 1px 5px 5px 1px;
+}
 /*Get_Notified styles end*/
 /*FOOTER styles start*/
 footer{
     height: 360px;
     background-color: #181617;
-    background: url(../assets/img/bg_Footer.jpg) no-repeat center;
+    background: url(../assets/img/bg_Footer.jpg) no-repeat top;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
 }
 footer .wrapper{
-    max-width: auto;
+    width: 100%;
 }
 .footer_wrapper{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
 }
 .footer_nav_list{
@@ -311,5 +331,23 @@ footer .wrapper{
     display: flex;
     flex-wrap: wrap;
     list-style: none;
+}
+.footer_list_item{
+    margin-right: 85px;
+}
+.footer_list_item:last-child{
+    margin-right: 0;
+}
+.footer_list_item:hover, .footer_list_item:focus, .footer_list_item:active{
+    opacity: .75;
+}
+.footer_social_item:hover{
+    opacity: .75;
+}
+.footer_social_item{
+    margin-left: 27px;
+}
+.footer_social_item:first-child{
+    margin-left: 0;
 }
 /*FOOTER styles end*/
