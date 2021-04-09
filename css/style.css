@@ -41,6 +41,7 @@ button{
     border-radius: 5px;
     padding: 13px 23px 13px 23px;
     cursor:default;
+    outline: none;
 }
 button:hover{
     background:#CD6326;
