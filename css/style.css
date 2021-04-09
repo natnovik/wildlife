@@ -72,6 +72,7 @@ button:active{
 }
 .big_button:hover{
     background: #E39128;
+    border: none;
 }
 .big_button:active{
     background: #8F5613;
@@ -116,13 +117,13 @@ a figure:hover{
 /*Header styles start*/
 .header{
     position: fixed;
-    z-index: 1;
+    z-index: 1; 
     width: 100%;
     transition: .2s linear;
 }
-.header_active{
+/* .header_active{
     background-color: #02160b;
-}
+} */
 .header_wrapper{
     display: flex;
     flex-wrap: wrap;
